@@ -1,0 +1,31 @@
+{
+  "name": "grok-ajax",
+  "version": "1.0.0",
+  "description": "Задачи для понимания AJAX и клиент-серверной архитектуры.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elbrus-Bootcamp/grok-ajax.git"
+  },
+  "keywords": [
+    "ajax",
+    "client-server",
+    "grok"
+  ],
+  "author": "ehpc@ehpc.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elbrus-Bootcamp/grok-ajax/issues"
+  },
+  "homepage": "https://github.com/Elbrus-Bootcamp/grok-ajax#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0",
+    "string-similarity": "^4.0.1"
+  }
+}
