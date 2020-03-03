@@ -26,12 +26,17 @@ async function compareSources(fileA, fileB) {
 /**
  * Рассчитывает оценку похожести кода
  */
-global.gradeSource = async (taskName) => {
+async function gradeSource(taskName) {
   const filesToCompare = ['server.js'];
   const grades = await Promise.all(filesToCompare.map(async (fileName) => {
-    const baseFile = path.join(__dirname, `../answers/${taskName}/${fileName}`);
-    const destFile = path.join(__dirname, `../${taskName}/${fileName}`);
+    const baseFile = path.join(__dirname, `../../answers/${taskName}/${fileName}`);
+    const destFile = path.join(__dirname, `../../puzzles/${taskName}/${fileName}`);
     return compareSources(baseFile, destFile);
   }));
   return grades.reduce((acc, grade) => acc + grade / filesToCompare.length, 0);
+}
+
+module.exports = {
+  compareSources,
+  gradeSource,
 };
