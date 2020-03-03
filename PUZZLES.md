@@ -3,12 +3,12 @@
 1. ~~Минимальный HTTP сервер
 1. ~~Роут GET / => Hello
 1. ~~Два роута GET /page1, GET /page2
-1. Роут GET /query-as-object отдаёт объект Query
-1. Роут GET /json отдаёт JSON-объект {"message": "Hello!"}
-1. Роут GET /answer отдаёт число 42
-1. Роут GET /query-string отдаёт строку Query
+1. ~~Роут GET /query-as-object отдаёт объект Query
+1. ~~Роут GET /answer отдаёт число 42
+1. ~~Роут GET /json отдаёт JSON-объект {"message": "Hello!"}
+1. Роут GET /query-as-string отдаёт строку Query
 1. Роут GET /get-readme считывает файл README и отдаёт его содержимое
-1. Роут GET /form отрисовывает форму для ввода логина и пароля
+1. Роут GET /form отрисовывает форму для ввода логина и пароля.
 1. Роут GET /form отрисовывает форму для ввода логина и пароля. Роут POST /form выводит строку "Привет, <login>!".
 
 # Шаблонизатор
