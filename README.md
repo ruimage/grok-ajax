@@ -7,6 +7,20 @@
 Переходить к следующей задаче следует только после того, как ты
 полностью поймёшь предыдущую.
 
+## Список задач
+
+### Basic HTTP
+1. [Минимальный HTTP сервер](puzzles/puzzle1/)
+2. [Hello](puzzles/puzzle2/)
+3. [Две страницы](puzzles/puzzle3/)
+4. [Query](puzzles/puzzle4/)
+5. [42](puzzles/puzzle5/)
+6. [JSON](puzzles/puzzle6/)
+7. [Query-строка](puzzles/puzzle7/)
+8. [README ME](puzzles/puzzle8/)
+9. [Форма входа](puzzles/puzzle9/)
+10. [POST формы входа](puzzles/puzzle10/)
+
 ## Структура проекта
 
 Каждая задача располагается в отдельной папке с названием `puzzleN`.
