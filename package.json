@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest --runInBand",
+    "test-dev": "TEST_MODE=development npx jest --runInBand",
     "debug-test": "node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "repository": {

@@ -55,9 +55,12 @@ function waitTillPortIsFree(port) {
  * @returns {Function} Функция для завершения процесса
  */
 function runPuzzle(name) {
+  const puzzlesDir = process.env.TEST_MODE === 'development'
+    ? 'answers'
+    : 'puzzles';
   const port = process.env.PORT || 3000;
   return new Promise((resolve, reject) => {
-    const node = spawn('node', [`./answers/${name}/server.js`]);
+    const node = spawn('node', [`./${puzzlesDir}/${name}/server.js`]);
     node.on('error', reject);
     // Дождаться поднятия сервера
     const interval = 100;
