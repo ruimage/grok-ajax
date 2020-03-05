@@ -37,7 +37,9 @@
 
 ### Handlebars
 
-200\. 
+200\. [Подключаем Handlebars](puzzles/puzzle200/README200.md)
+
+205\. [Подключаем Layout](puzzles/puzzle205/README205.md)
 
 ## Структура проекта
 
