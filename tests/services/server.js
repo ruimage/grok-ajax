@@ -60,7 +60,13 @@ function runPuzzle(name) {
     : 'puzzles';
   const port = process.env.PORT || 3000;
   return new Promise((resolve, reject) => {
-    const node = spawn('node', [`./${puzzlesDir}/${name}/server.js`]);
+    const node = spawn(
+      'node',
+      ['server.js'],
+      {
+        cwd: `./${puzzlesDir}/${name}/`,
+      },
+    );
     node.on('error', reject);
     // Дождаться поднятия сервера
     const interval = 100;
