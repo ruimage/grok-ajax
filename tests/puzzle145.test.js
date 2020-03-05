@@ -4,6 +4,7 @@ describe('Puzzle 145', () => {
     it('отдаёт корректную форму', async () => {
       const res = await global.fetch(`${global.url}/login`);
       expect(res).toContain('<form');
+      expect(res).toContain('method="POST"');
       expect(res).toContain('<input');
       expect(res).toContain('type="text"');
       expect(res).toContain('type="password"');
@@ -12,11 +13,11 @@ describe('Puzzle 145', () => {
       expect(res).toContain('<button');
     });
     it('даёт возможность войти Фёдору', async () => {
-      const res = await global.fetch(`${global.url}/login`, { login: 'fedor', password: '123456' });
+      const res = await global.fetch(`${global.url}/login`, 'login=fedor&password=123456');
       expect(res).toEqual('Вы вошли в систему!');
     });
     it('блокирует некорректных пользователей', async () => {
-      const res = await global.fetch(`${global.url}/login`, { login: 'danya', password: 'aaa' });
+      const res = await global.fetch(`${global.url}/login`, 'login=danya&password=aaa');
       expect(res).toEqual('Неверные учётные данные!');
     });
   });
