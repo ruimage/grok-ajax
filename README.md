@@ -10,16 +10,16 @@
 ## Список задач
 
 ### Basic HTTP
-1. [Минимальный HTTP сервер](puzzles/puzzle1/)
-2. [Hello](puzzles/puzzle2/)
-3. [Две страницы](puzzles/puzzle3/)
-4. [Query](puzzles/puzzle4/)
-5. [42](puzzles/puzzle5/)
-6. [JSON](puzzles/puzzle6/)
-7. [Query-строка](puzzles/puzzle7/)
-8. [README ME](puzzles/puzzle8/)
-9. [Форма входа](puzzles/puzzle9/)
-10. [POST формы входа](puzzles/puzzle10/)
+100\. [Минимальный HTTP сервер](puzzles/puzzle100/README100.md)
+105\. [Hello](puzzles/puzzle105/README105.md)
+110\. [Две страницы](puzzles/puzzle110/README110.md)
+115\. [Query](puzzles/puzzle115/README115.md)
+120\. [42](puzzles/puzzle120/README120.md)
+125\. [JSON](puzzles/puzzle125/README125.md)
+130\. [Query-строка](puzzles/puzzle130/README130.md)
+135\. [README ME](puzzles/puzzle135/README135.md)
+140\. [Форма входа](puzzles/puzzle140/README140.md)
+145\. [POST формы входа](puzzles/puzzle145/README145.md)
 
 ## Структура проекта
 
