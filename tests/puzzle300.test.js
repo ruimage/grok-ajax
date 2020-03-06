@@ -16,6 +16,10 @@ describe('Puzzle 300', () => {
       const src = await global.getSource('puzzle300', 'views/index.hbs');
       expect(src).toEqual('Привет!');
     });
+    it('шаблон layout.hbs корректный', async () => {
+      const src = await global.getSource('puzzle300', 'views/layout.hbs');
+      expect(src).toContain('/style.css');
+    });
   });
   describe('Роут GET /', () => {
     it('выводит нужный текст', async () => {
