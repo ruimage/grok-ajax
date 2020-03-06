@@ -16,8 +16,8 @@
 
 1. ~~Роут GET / делает render шаблона index.hbs "Привет!".
 1. ~~В layout.hbs добавить html-шаблон. Сделать так, чтобы title в браузере был "Крутой тайтл".
-1. Роут GET /?name=Фёдор делает render шаблона index.hbs "Привет, <name>!"
-1. Роут POST / делает render шаблона index.hbs "Привет, <name>!"
+1. ~~Роут GET /?name=Фёдор делает render шаблона index.hbs "Привет, <name>!"
+1. ~~Роут POST / делает render шаблона index.hbs "Привет, <name>!"
 
 # Statics
 
