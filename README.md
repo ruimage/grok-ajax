@@ -48,7 +48,12 @@
 ### Statics
 
 300\. [Подключаем стили](puzzles/puzzle300/README300.md)
+305\. [Картинка и папки](puzzles/puzzle305/README305.md)
 
+### Client JS
+
+400\. [Клиентский javascript](puzzles/puzzle400/README400.md)
+405\. [To defer or not to defer](puzzles/puzzle405/README405.md)
 
 ## Структура проекта
 

@@ -1,10 +1,11 @@
 describe('Puzzle 305', () => {
   global.testSanity('puzzle305');
   describe('Исходный код', () => {
-    it('использует шаблонизатор', async () => {
+    it('использует шаблонизатор и статику', async () => {
       const src = await global.getSource('puzzle305', 'server.js');
       expect(src).toContain('express.static');
       expect(src).toContain('public');
+      expect(src).toContain('.render(');
     });
     it('стиль корректный', async () => {
       const src = await global.getSource('puzzle305', 'public/styles/style.css');
@@ -22,6 +23,7 @@ describe('Puzzle 305', () => {
     it('шаблон layout.hbs корректный', async () => {
       const src = await global.getSource('puzzle305', 'views/layout.hbs');
       expect(src).toContain('/style.css');
+      expect(src).toContain('{{{body}}}');
     });
   });
   describe('Роут GET /', () => {
