@@ -6,7 +6,7 @@ function testSanity(puzzleName) {
   return new Promise((resolve) => {
     it('Код похож на эталонный код', async () => {
       const grade = await global.gradeSource(puzzleName);
-      expect(grade).toBeGreaterThan(process.env.GRADE_THRESHOLD || 0.7);
+      expect(grade).toBeGreaterThan(process.env.GRADE_THRESHOLD || 0.5);
     });
     it('Порт свободен перед запуском задачи', async () => {
       expect(await portIsBusy(process.env.PORT || 3000)).toBe(false);

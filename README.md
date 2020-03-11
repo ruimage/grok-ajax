@@ -54,6 +54,9 @@
 
 400\. [Клиентский javascript](puzzles/puzzle400/README400.md)
 405\. [To defer or not to defer](puzzles/puzzle405/README405.md)
+410\. [Полувход](puzzles/puzzle410/README410.md)
+415\. [Fetch-аутентификация](puzzles/puzzle415/README415.md)
+420\. [Кусочек с бэкэнда](puzzles/puzzle420/README420.md)
 
 ## Структура проекта
 

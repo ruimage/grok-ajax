@@ -1,7 +1,7 @@
 describe('Puzzle 405', () => {
   global.testSanity('puzzle405');
   describe('Исходный код', () => {
-    it('использует шаблонизато и статику', async () => {
+    it('использует шаблонизатор и статику', async () => {
       const src = await global.getSource('puzzle405', 'server.js');
       expect(src).toContain('express.static');
       expect(src).toContain('public');
