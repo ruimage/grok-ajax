@@ -4,9 +4,9 @@
   "description": "Задачи для понимания AJAX и клиент-серверной архитектуры.",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest --runInBand --forceExit",
-    "test-dev": "TEST_MODE=development npx jest --runInBand",
-    "debug-test": "node --inspect-brk node_modules/.bin/jest --runInBand"
+    "test": "npx jest --runInBand --forceExit --bail",
+    "test-dev": "TEST_MODE=development npx jest --runInBand --bail",
+    "debug-test": "node --inspect-brk node_modules/.bin/jest --runInBand --bail"
   },
   "repository": {
     "type": "git",

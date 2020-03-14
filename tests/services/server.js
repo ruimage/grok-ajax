@@ -67,6 +67,7 @@ function runPuzzle(name) {
         cwd: `./${puzzlesDir}/${name}/`,
       },
     );
+    node.stderr.on('data', (data) => reject(new Error(`Ошибка выполнения: ${data}`)));
     node.on('error', reject);
     // Дождаться поднятия сервера
     const interval = 100;
