@@ -55,7 +55,7 @@ module.exports = {
   // globalSetup: undefined,
 
   // A path to a module which exports an async function that is triggered once after all test suites
-  // globalTeardown: undefined,
+  // globalTeardown: './tests/services/teardown.js',
 
   // A set of global variables that need to be available in all test environments
   // globals: {},
@@ -91,7 +91,7 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  preset: 'jest-puppeteer',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -126,13 +126,13 @@ module.exports = {
   setupFiles: ['./tests/services/common.js'],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['expect-puppeteer'],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: 'node',
+  // testEnvironment: 'node',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},

@@ -39,28 +39,24 @@ describe('Puzzle 415', () => {
       expect(res).toContain('name="password"');
     });
     it('выводит ошибку входа при неверном логине', async () => {
-      const { page, close } = await global.browser('/login');
-      page.on('dialog', async (dialog) => {
-        expect(dialog.message()).toEqual('Ошибка входа.');
-        await dialog.dismiss();
-        await close();
+      await page.goto(global.makeUrl('/login'));
+      await expect(page).toFill('input[name="login"]', 'danya');
+      await expect(page).toFill('input[name="password"]', 'aabbcc');
+      const dialog = await expect(page).toDisplayDialog(async () => {
+        await expect(page).toClick('button[type="submit"]');
       });
-      const loginInput = await page.$('input[name="login"]');
-      await loginInput.type('danya');
-      await page.click('button[type="submit"]');
+      expect(dialog.message()).toEqual('Ошибка входа.');
+      await dialog.dismiss();
     });
     it('оповещает об успехе при правильном логине', async () => {
-      const { page, close } = await global.browser('/login');
-      page.on('dialog', async (dialog) => {
-        expect(dialog.message()).toEqual('Успешный вход!');
-        await dialog.dismiss();
-        await close();
+      await page.goto(global.makeUrl('/login'));
+      await expect(page).toFill('input[name="login"]', 'fedor');
+      await expect(page).toFill('input[name="password"]', '123456');
+      const dialog = await expect(page).toDisplayDialog(async () => {
+        await expect(page).toClick('button[type="submit"]');
       });
-      const loginInput = await page.$('input[name="login"]');
-      await loginInput.type('fedor');
-      const passwordInput = await page.$('input[name="password"]');
-      await passwordInput.type('123456');
-      await page.click('button[type="submit"]');
+      expect(dialog.message()).toEqual('Успешный вход!');
+      await dialog.dismiss();
     });
   });
   afterAll(() => global.puzzle415.kill());

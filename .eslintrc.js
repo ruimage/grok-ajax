@@ -12,6 +12,10 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    page: true,
+    browser: true,
+    context: true,
+    jestPuppeteer: true,
   },
   parserOptions: {
     ecmaVersion: 2018,

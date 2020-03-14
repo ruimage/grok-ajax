@@ -33,10 +33,8 @@ describe('Puzzle 405', () => {
   });
   describe('Главная страница', () => {
     it('Показывает приветствие', async () => {
-      const { page, close } = await global.browser();
-      const h1 = await page.$eval('h1', (el) => el.innerText);
-      expect(h1).toEqual('Привет!');
-      await close();
+      await page.goto(global.makeUrl());
+      await expect(page).toMatchElement('h1', { text: 'Привет!' });
     });
   });
   afterAll(() => global.puzzle405.kill());
