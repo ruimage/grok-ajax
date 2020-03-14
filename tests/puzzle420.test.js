@@ -31,30 +31,26 @@ describe('Puzzle 420', () => {
     });
   });
   describe('Главная страница', () => {
-    let page;
-    let closeBrowser;
     beforeAll(async () => {
-      const data = await global.browser('/');
-      page = data.page;
-      closeBrowser = data.close;
+      await page.goto(global.makeUrl());
     });
-    it('счетчик изначально пустой', async () => {
-      const count = await page.$eval('#count', (el) => el.innerText);
-      expect(count).toBe('');
+    it('счетчик изначально нулевой', async () => {
+      await expect(page).toMatchElement('#count', { text: '0' });
     });
     it('после первого нажатия счетчик равен 1', async () => {
       await page.click('button');
       await page.waitFor(1000);
-      const count = await page.$eval('#count', (el) => el.innerText);
-      expect(count).toBe('1');
+      await expect(page).toMatchElement('#count', { text: '1' });
     });
     it('после второго нажатия счетчик равен 2', async () => {
       await page.click('button');
       await page.waitFor(1000);
-      const count = await page.$eval('#count', (el) => el.innerText);
-      expect(count).toBe('2');
+      await expect(page).toMatchElement('#count', { text: '2' });
     });
-    afterAll(closeBrowser);
+    it('после обновления страницы счетчик сохраняется', async () => {
+      await page.goto(global.makeUrl());
+      await expect(page).toMatchElement('#count', { text: '2' });
+    });
   });
   afterAll(() => global.puzzle420.kill());
 });

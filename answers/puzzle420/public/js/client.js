@@ -1,29 +1,11 @@
-document.login.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const {
-    login: { value: login },
-    password: { value: password },
-    action,
-    method,
-  } = event.target;
+const countElement = document.getElementById('count');
+document.querySelector('button').addEventListener('click', async () => {
   let jsonResponse;
   try {
-    const response = await fetch(action, {
-      method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        login,
-        password,
-      }),
-    });
+    const response = await fetch('/next');
     jsonResponse = await response.json();
   } catch (e) {
-    console.error(e);
+    return console.error(e);
   }
-  if (jsonResponse && jsonResponse.authenticated) {
-    return alert('Успешный вход!');
-  }
-  return alert('Ошибка входа.');
+  countElement.innerText = jsonResponse.count;
 });

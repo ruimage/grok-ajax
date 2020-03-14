@@ -14,19 +14,21 @@ app.use(express.json());
 // Эта переменная подключает шаблонизатор Handlebars
 app.set('view engine', 'hbs');
 
+// Изначальное значение счетчика
+app.locals.count = 0;
+
 // Роут, отвечающий на запрос GET /
 app.get('/', (req, res) => {
   // Рендерим шаблон index.hbs
   return res.render('index');
 });
 
-app.locals.count = 0;
 // Роут, отвечающий на запрос GET /next
 app.get('/next', (req, res) => {
-  res.json({
+  app.locals.count += 1;
+  return res.json({
     count: app.locals.count,
   });
-  app.locals.count += 1;
 });
 
 // Запуск сервера по порту 3000
