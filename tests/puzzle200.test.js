@@ -9,7 +9,7 @@ describe('Puzzle 200', () => {
   describe('Роут GET /', () => {
     it('отдаёт Привет!', async () => {
       const res = await global.fetch(`${global.url}/`);
-      expect(res).toEqual('Привет!');
+      expect(res.trim()).toEqual('Привет!');
     });
   });
   afterAll(() => global.puzzle200.kill());

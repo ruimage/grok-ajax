@@ -31,7 +31,7 @@ describe('Puzzle 215', () => {
     it('выводит корректный текст', async () => {
       const name = encodeURIComponent('Фёдор');
       const res = await global.fetch(`${global.url}/hello`, `name=${name}`);
-      expect(res).toEqual('Привет, Фёдор!');
+      expect(res.trim()).toEqual('Привет, Фёдор!');
     });
   });
   afterAll(() => global.puzzle215.kill());

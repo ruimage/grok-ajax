@@ -15,7 +15,7 @@ describe('Puzzle 300', () => {
     });
     it('шаблон index.hbs корректный', async () => {
       const src = await global.getSource('puzzle300', 'views/index.hbs');
-      expect(src).toEqual('Привет!');
+      expect(src.trim()).toEqual('Привет!');
     });
     it('шаблон layout.hbs корректный', async () => {
       const src = await global.getSource('puzzle300', 'views/layout.hbs');

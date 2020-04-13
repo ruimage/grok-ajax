@@ -9,7 +9,7 @@ describe('Puzzle 400', () => {
     });
     it('шаблон index.hbs корректный', async () => {
       const src = await global.getSource('puzzle400', 'views/index.hbs');
-      expect(src).toEqual('Привет!');
+      expect(src.trim()).toEqual('Привет!');
     });
     it('шаблон layout.hbs корректный', async () => {
       const src = await global.getSource('puzzle400', 'views/layout.hbs');
@@ -26,7 +26,7 @@ describe('Puzzle 400', () => {
   describe('Роут GET /', () => {
     it('выводит текст', async () => {
       const res = await global.fetch(`${global.url}/`);
-      expect(res).toContain('Привет!');
+      expect(res.trim()).toContain('Привет!');
     });
   });
   afterAll(() => global.puzzle400.kill());
