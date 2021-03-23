@@ -8,7 +8,7 @@ function testSanity(puzzleName) {
       const grade = await global.gradeSource(puzzleName);
       expect(grade).toBeGreaterThan(process.env.GRADE_THRESHOLD || 0.5);
     });
-    it('Порт свободен перед запуском задачи', async () => {
+    it('Порт свободен перед запуском задачи ( проверь не запущены ли другие процессы )', async () => {
       expect(await portIsBusy(process.env.PORT || 3000)).toBe(false);
     });
     it('Сервер успешно запускается', async () => {
