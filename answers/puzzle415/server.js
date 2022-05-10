@@ -1,3 +1,6 @@
+// Подключаем babel для работы с jsx
+require('@babel/register');
+
 // Подключение библиотеки express
 const express = require('express');
 
