@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Main() {
+module.exports = function Login() {
   return (
     <Layout>
       <form name="login">

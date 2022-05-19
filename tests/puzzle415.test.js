@@ -7,7 +7,7 @@ describe('Puzzle 415', () => {
       expect(src).toContain('public');
       expect(src).toContain('renderToStaticMarkup');
     });
-    it('шаблон Login.jsx корректный', async () => {
+    it('React-компонент Login.jsx корректный', async () => {
       const src = await global.getSource('puzzle415', 'views/Login.jsx');
       expect(src).toContain('<form');
       expect(src).toContain('button');
