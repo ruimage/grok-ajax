@@ -4,7 +4,7 @@
 * Создай React-компонент `Main.jsx` с содержимым
   ```
   <h1>Кусочек</h1>
-  <div id="count">{{count}}</div>
+  <div id="count">{count}</div>
   <button type="button">Следующий</button>
   ```
 * Создай роут `GET /next`, отдающий JSON `{"count": N}`, где N - значение счетчика,
