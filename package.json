@@ -23,20 +23,22 @@
     "url": "https://github.com/Elbrus-Bootcamp/grok-ajax/issues"
   },
   "homepage": "https://github.com/Elbrus-Bootcamp/grok-ajax#readme",
-  "devDependencies": {
+  "dependencies": {
     "@jest/test-sequencer": "^25.1.0",
-    "eslint": "^8.15.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.5.0",
     "expect-puppeteer": "^4.4.0",
     "jest": "^25.1.0",
     "jest-puppeteer": "^4.4.0",
     "node-fetch": "^2.6.0",
     "puppeteer": "^2.1.1",
     "string-similarity": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0"
   }
 }
