@@ -6,5 +6,6 @@ const app = express();
 app.listen(3000);
 // создаем обработчик обращения на адрес
 app.get('/query-as-string', (req, res) => {
-  res.send(`${req.query}`);
+  res.send(`${req.originalUrl}`
+    .replace('/query-as-string', ''));
 });
