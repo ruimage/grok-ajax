@@ -5,9 +5,9 @@ const app = express();
 
 app.use(urlencoded({ extended: true }));
 
-app.put('/replace', (req, res) => {
-  if (req.body.name === 'fedor') res.send('OK');
-  res.send('BAD');
+app.delete('/delete', (req, res) => {
+  if (req.body.name === 'danya') res.send('Удалено');
+  res.send('Не могу удалить');
 });
 
 app.listen(3000);
